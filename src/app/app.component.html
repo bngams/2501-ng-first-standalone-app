@@ -235,7 +235,10 @@
       <p>Apply a custom class with an attribute directive: <span [ngClass]="(title.length > 5) ? 'long-title': ''">My span</span></p>
 
       <h2>Structure directives</h2>
-      <p>Change DOM/strucrure with an structural directive: <span *ngIf="title.length > 5">My span</span></p>
+      <p>Change DOM/strucrure with an structural directive: <span *ngIf="isLongTitle">My span</span></p>
+
+      <h2>Attribute binding</h2>
+      <p>Change attribute display with an attribute binding: <span [hidden]="title.length > 5">My span</span></p>
 
       <h2>Event binding</h2>
       <button (click)="doSomething()">Do something!</button>

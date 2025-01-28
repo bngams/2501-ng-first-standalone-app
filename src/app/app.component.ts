@@ -17,5 +17,15 @@ export class AppComponent {
 
   doSomething(): void {
     console.log('doSomething....');
+    this.title = this.title.length > 5 ? 'Click' : 'Try again to click';
+  }
+
+  // we can use a dynamic prop with get
+  // getIsLongTitle() {
+  //   return this.title.length > 5;
+  // }
+
+  get isLongTitle(): boolean {
+    return this.title.length > 5;
   }
 }
